@@ -6,7 +6,7 @@ widgets:
   - type: profile
     position: left
     author: Gavin Gong
-    author_title: Zenh
+    author_title: Zen
     location: Shanghai
     ? avatar
     ? gravatar
