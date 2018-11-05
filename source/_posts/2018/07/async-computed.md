@@ -1,5 +1,6 @@
 ---
 title: Vue 异步计算属性实现
+date: 2018-07-28
 widgets: []
 tags:
   - Vue
@@ -89,5 +90,3 @@ Vue.mixin({
 
 以上只是简单的实现, 源码其实还包括 lazy 计算属性, 默认值, 错误处理等特性, 具体可以看源码. 这是注释版源码
 [vue-async-computed](https://github.com/Gavin-Gong/source/tree/master/vue-async-computed)
-
-> 2018-07-28

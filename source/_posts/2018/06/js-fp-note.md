@@ -1,5 +1,6 @@
 ---
 title: JavsScript 函数式学习手记
+date: 2018-06-14
 widgets: []
 tags:
   - JavaScript

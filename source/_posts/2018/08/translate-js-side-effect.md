@@ -1,5 +1,6 @@
 ---
 title: 译:如何使用纯函数式 JavaScript 处理脏副作用
+date: 2018-08-31
 tags:
   - functional programming
   - JavaScript

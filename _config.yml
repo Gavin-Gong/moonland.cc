@@ -8,7 +8,7 @@ subtitle: 月の境
 description: 月の境
 keywords: 前端 编程 代码 随想 笔记
 author: Gavin Gong
-? language
+language: default
 ? timezone
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

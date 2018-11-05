@@ -1,5 +1,6 @@
 ---
 title: nginx 笔记
+date: 2018-07-15
 widgets: []
 tags:
   - Nginx

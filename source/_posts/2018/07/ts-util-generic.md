@@ -1,5 +1,6 @@
 ---
 title: TS 一些工具泛型的使用及其实现
+date: 2018-07-20
 tags:
   - TypeScript
   - Generic

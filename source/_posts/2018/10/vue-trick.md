@@ -1,5 +1,6 @@
 ---
 title: 关于 Vue 的一些冷门技巧
+date: 2018-10-11
 tag:
   - Vue
 categories:

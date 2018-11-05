@@ -2,6 +2,7 @@
 version: 2.0.0
 # Path or URL to the website's icon
 favicon: /images/favicon.svg
+language: en
 # Path or URL to RSS atom.xml
 ? rss
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
@@ -62,11 +63,13 @@ search:
 # Comment plugin settings (http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins)
 comment:
   # Name of the comment plugin
-  type: gitment
-  owner: moon-land # (required) GitHub user name
-  repo: blog # (required) GitHub repository name
-  client_id: 9ecf8d2c958c6306747d # (required) OAuth application client id
-  client_secret: f66d864c6e7ca23815100728ce53f02a7780da1c
+  # type: gitment
+  # owner: moon-land # (required) GitHub user name
+  # repo: blog # (required) GitHub repository name
+  # client_id: 9ecf8d2c958c6306747d # (required) OAuth application client id
+  # client_secret: f66d864c6e7ca23815100728ce53f02a7780da1c
+  type: disqus
+  shortname: moonland
 # Share plugin settings (http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins)
 share:
   # Share plugin name
