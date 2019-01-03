@@ -79,3 +79,7 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+index2_include_index: true
+index2_generator:
+  exclude:
+    - category 随感 # 不包含标签为Hexo的文章

@@ -4,7 +4,7 @@ version: 2.0.0
 favicon: /images/favicon.svg
 language: en
 # Path or URL to RSS atom.xml
-? rss
+rss: "atom.xml"
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
 logo:
   text: 月の境
@@ -35,6 +35,9 @@ navbar:
     GitHub:
       icon: fab fa-github
       url: "http://github.com/gavin-gong"
+    RSS:
+      icon: fas fa-rss
+      url: "atom.xml"
 # Footer section link settings
 footer:
   # Links to be shown on the right of the footer section
