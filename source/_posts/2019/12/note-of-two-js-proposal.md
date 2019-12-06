@@ -34,6 +34,8 @@ let prop = _.get(a, "b.c.d", undefined) // 可以自定义默认值
 let prop = a?.b?.c?.d
 ```
 
+<!-- more -->
+
 从提案中找到这么一句话
 
 > If the operand at the left-hand side of the ?. operator evaluates to undefined or null, the expression evaluates to undefined. Otherwise the targeted property access, method or function call is triggered normally.
@@ -65,8 +67,6 @@ obj?.prop; // optional static property access
 obj?.[expr]; // optional dynamic property access
 func?.(...args); // optional function or method call
 ```
-
-<!-- more -->
 
 ## Nullish Coalescing
 
@@ -101,6 +101,37 @@ _.get(info, "person.age", 25);
 ```
 
 我还是用 lodash 吧
+
+## 后续
+
+刚好在 v2ex 看到有帖子说这个问题，之前我认为的等价写法，其实并不成立，有个老哥纠正了我的写法，列出了
+
+```js
+({a:null})?.a??'default'
+=>'default'
+
+_.get({a:null},'a','default')
+=>null
+
+// 老哥给出等价写法
+_.defaultTo(_.get({a:null},'a'),'default')
+```
+
+事后查文档发现也不是完全等价的写法
+`_.defaultTo`对 `null`，`undefined`，`NaN` 都会取默认值
+会导致, 以下两种情况并不等价
+
+```js
+({ a: NaN }?.a ?? "default"); // NaN
+_.defaultTo(_.get({ a: NaN }, "a"), "default"); // default
+```
+
+再次总结来说的话
+
+- `_.get` 碰到 `undefined` 返回默认值
+- `_.defaultTo` 碰到 `null || undefined || NaN` 返回默认值
+- `??` 碰到 `null || undefined` 返回默认值
+- `.?` 碰到 `null || undefined` 返回 `undefined`
 
 ## 参考
 
