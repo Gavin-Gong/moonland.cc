@@ -6,7 +6,6 @@ tag:
 categories:
   - FE
 widgets: []
-thumbnail: https://images.unsplash.com/photo-1530903677198-7c9f3577a63e
 ---
 
 ## watch
@@ -66,9 +65,7 @@ requireComponent.keys().forEach(fileName => {
   // Get component config
   const componentConfig = requireComponent(fileName);
   // Get PascalCase name of component
-  const componentName = upperFirst(
-    camelCase(fileName.replace(/^\.\//, "").replace(/\.\w+$/, ""))
-  );
+  const componentName = upperFirst(camelCase(fileName.replace(/^\.\//, "").replace(/\.\w+$/, "")));
   // Register component globally
   Vue.component(componentName, componentConfig.default || componentConfig);
 });
@@ -106,13 +103,9 @@ export default modules;
 
 ```html
 <template>
-    <label>
+  <label>
     {{ label }}
-    <input
-      v-bind="$attrs"
-      :value="value"
-      v-on="listeners"
-    >
+    <input v-bind="$attrs" :value="value" v-on="listeners" />
   </label>
 </template>
 
@@ -123,11 +116,11 @@ export default modules;
       listeners() {
         return {
           ...this.$listeners,
-          input: event => this.$emit('input', event.target.value)
-        }
+          input: event => this.$emit("input", event.target.value)
+        };
       }
     }
-  }
+  };
 </script>
 ```
 
@@ -135,14 +128,14 @@ export default modules;
 
 ```html
 <script>
-export default {
-  functional: true,
-  render() {
-    return [1, 2, 3].map(item => {
-      return <li>{item}</li>
-    })
-  }
-}
+  export default {
+    functional: true,
+    render() {
+      return [1, 2, 3].map(item => {
+        return <li>{item}</li>;
+      });
+    }
+  };
 </script>
 ```
 

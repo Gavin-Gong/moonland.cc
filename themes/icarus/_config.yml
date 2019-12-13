@@ -151,6 +151,8 @@ providers:
   # Name or URL of the JavaScript and/or stylesheet CDN provider
   cdn: jsdelivr
   # Name or URL of the webfont CDN provider
-  fontcdn: google
+  # fontcdn: google
+  fontcdn: https://fonts.loli.net/${type}?family=${fontname}
   # Name or URL of the webfont Icon CDN provider
-  iconcdn: fontawesome
+  # iconcdn: fontawesome
+  iconcdn: https://lib.baomitu.com/font-awesome/5.4.1/css/all.min.css
