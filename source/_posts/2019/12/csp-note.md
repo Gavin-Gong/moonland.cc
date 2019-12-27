@@ -1,4 +1,4 @@
-7---
+---
 title: 记一次 Content-Security-Policy 请求头的坑 
 widgets: []
 date: 2019-12-27
