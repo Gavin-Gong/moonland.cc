@@ -139,7 +139,8 @@ type NonFunction<T> = OmitByValue<T, Function>
 ``` ts
 A extends B  -> A <= B
 B extends A  -> B >= A
-// 根据我多年前的数学经验，满足 A extends B && B extends A 就说明 A == B 为同一类型（其实只是可以互相 assign 额）
+// 根据我多年前的数学经验，满足 A extends B && B extends A 就说明 A == B 为同一类型(误)
+// （其实只是可以互相 assign 额）
 ```
 
 于是
@@ -177,7 +178,7 @@ export type PickByValueExact<T, V> = Pick<
 >;
 ```
 
-PS: `Same` 没法 cover 一些顶级类型(`any, unkown`)和可选属性的 case
+PS: `Same` 没法 cover 一些顶级类型(`any, unkown`)和可选属性的 case，其实并不是真正的同一类型
 
 ```ts
 type A = Same<{ b?: string }, {}, 1, 0> // 1 -> {} == { b?: string }
@@ -193,7 +194,7 @@ type D = Same<{ a: any }, {  a: unkown }, 1, 0> // 1
 
 ### OmitByValueExact
 
-有 `PickByValueExact`，自然就有 `OmitByValueExact` 与之对应, 还是利用一下之前写好的 `Same`
+有 `PickByValueExact`，自然就有 `OmitByValueExact` 与之对应, 还是将错就错利用一下之前写好的 `Same`
 
 ``` ts
 type OmitByValueExact<T, V> = Omit<
@@ -290,7 +291,7 @@ type MutableKeys<T extends object> = {
 ## 结尾
 
 其实大数多未必会用到，只是训练自己对泛型的用法的熟练度，所以水了一篇文章。
-后面开始写业务啦，有机会再水一篇。
+utility-types 中还有一些泛型没去读，后面开始写业务啦，有机会再水一篇。
 
 ## 参考
 
